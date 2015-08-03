@@ -1,5 +1,5 @@
 import sys, imp, time
-SOLVED = 3
+SOLVED = 6
 """
 # this file serves as the main module for interacting with my Euler solutions.
 # Running it will start a command line interface to determine which problem you want to solve
@@ -12,7 +12,7 @@ SOLVED = 3
 def main(argv=None):
     if argv is None:
         inputArgs = input("Enter Euler problem number (1-20 currently):  ")
-        if inputArgs < SOLVED:
+        if inputArgs <= SOLVED:
             inputArgs = "Euler"+str(inputArgs)
             mod = __import__(("solutions."+inputArgs))
             start = time.clock()
