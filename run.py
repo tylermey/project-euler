@@ -1,5 +1,5 @@
 import sys, imp, time
-SOLVED = 12
+SOLVED = 14
 """
 # this file serves as the main module for interacting with my Euler solutions.
 # Running it will start a command line interface to determine which problem you want to solve
