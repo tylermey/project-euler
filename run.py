@@ -1,5 +1,5 @@
 import sys, imp, time
-SOLVED = 9
+SOLVED = 12
 """
 # this file serves as the main module for interacting with my Euler solutions.
 # Running it will start a command line interface to determine which problem you want to solve
@@ -22,19 +22,19 @@ def main():
         else:
             print "unsolved, please use input between 1-%d" % SOLVED
     else:
-        try:
-            inputArgs = int(sys.argv[1])
-            if inputArgs <= SOLVED:
-                inputArgs = "Euler"+str(inputArgs)
-                mod = __import__(("solutions."+inputArgs))
-                start = time.clock()
-                eval(("mod."+inputArgs+".euler()"))
-                end = time.clock()
-                print "Time elapsed: %f seconds" % (end - start)
-            else:
-                print "unsolved, please use input between 1-%d" % SOLVED
-        except:
+        ##try:
+        inputArgs = int(sys.argv[1])
+        if inputArgs <= SOLVED:
+            inputArgs = "Euler"+str(inputArgs)
+            mod = __import__(("solutions."+inputArgs))
+            start = time.clock()
+            eval(("mod."+inputArgs+".euler()"))
+            end = time.clock()
+            print "Time elapsed: %f seconds" % (end - start)
+        else:
             print "unsolved, please use input between 1-%d" % SOLVED
+        #except:
+        #    print "catch all errors, CHECK YOUR CODE :)"
 
 if __name__ == "__main__":
     sys.exit(main())
