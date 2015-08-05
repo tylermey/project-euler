@@ -57,10 +57,18 @@ def isInt(inNum):
 # Output: factors
 # I got bored, so I tried to write it as a recursion 
 def find_factors(inNum):
-    # found this sweet function xrange I'd never seen before, and it's FAST
+    # found xrange I'd never seen used well before, and it's FAST
     for i in xrange(2,inNum):
         if inNum%i==0: return (i,) + find_factors(inNum/i)
     return (inNum,1)
+    
+# Input: number
+# Output: divisors
+def find_divisors(inNum):
+    arr = []
+    for i in xrange(1,inNum):
+        if inNum%i==0: arr.append(i)
+    return arr
 
 # Input: number
 # Output: number of divisors
