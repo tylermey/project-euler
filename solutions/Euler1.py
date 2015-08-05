@@ -4,4 +4,4 @@ def euler():
         if x%3==0 or x%5==0:
             y += x
 			
-    print "Answer: %d" % y
+    print ("Euler 1 answer: %d") % y
