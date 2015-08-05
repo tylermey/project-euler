@@ -75,3 +75,11 @@ def num_divisors(inNum):
         else:
             continue
     return total
+    
+    
+def sum_digits(inNum):
+    sum = 0
+    while inNum > 0:
+        sum += inNum%10
+        inNum /= 10
+    return sum
